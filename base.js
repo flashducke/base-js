@@ -31,30 +31,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     }
                     document.querySelector('.modal-container').classList.add('active-modal');
                     modal.classList.add('active-modal-item');
-                    document.querySelector('html,body').style.cssText = `
-                                                            padding-right: 17px;
-                                                            overflow: hidden;
-                                                          `
-                    document.querySelector('body header').style.cssText = `
-                                                            z-index: 99;
-                                                          `
                 });
             })
             close.addEventListener('click', () => {
                 document.querySelector('.modal-container').classList.remove('active-modal');
                 modal.classList.remove('active-modal-item');
-                document.querySelector('html,body').style.cssText = `
-                                                            overflow: ;
-                                                            padding-right: ;
-                                                          `
-                document.querySelector('body header').style.cssText = `
-                                                            z-index: ;
-                                                          `
             });
         }
         bindModal('.call-back-btn', '.form-container.order', '.form-container.order .modal-close');
-        bindModal('.write-btn', '.form-container.write', '.form-container.write .modal-close');
-        bindModal('.btn-burger', '.menu-modal', '.menu-modal .modal-close');
     }
     modals();
 
